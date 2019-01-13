@@ -61,11 +61,11 @@ const argv = require('yargs').argv;
       })));
     // traverse DOM to get item price
     const amazonitemsPrice = await amazons[i].page.evaluate(() => 
-      Array.from(document.querySelectorAll(
-        'span.a-size-base.a-color-price.s-price.a-text-bold'
-        )).map(item => item.innerText.trim()));
+      Array
+        .from(document.querySelectorAll('span.a-size-base.a-color-price.s-price.a-text-bold'))
+        .map(item => item.innerText.trim()));
     // add price to item detail object
-    amazonitemsPrice.forEach((price, i) => amazonItemsDetails[i].price = price);
+    amazonitemsPrice.forEach((price, index) => amazonItemsDetails[index].price = price);
     // add items details for given country to results object
     results[amazons[i].country] = amazonItemsDetails;
   }
