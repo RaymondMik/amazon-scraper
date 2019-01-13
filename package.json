@@ -1,0 +1,9 @@
+{
+  "name": "node_scraper",
+  "author": "Ramón Miklus",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "puppeteer": "^1.11.0",
+    "yargs": "^12.0.5"
+  }
+}
