@@ -46,7 +46,7 @@ const argv = require('yargs').argv;
     // focus input field
     await amazons[i].page.focus('.nav-search-field > input')
     // insert search key
-    await amazons[i].page.keyboard.type(argv.url);
+    await amazons[i].page.keyboard.type(argv.searchKey);
     // submit form
     await amazons[i].page.click('input.nav-input');
     // wait for result page to be loaded
